@@ -90,7 +90,7 @@ def make_predictions(listofargs, Threshold):
         df['ln_LoanAmount'] = ss_scaler3.transform(np.array(ln_LoanAmount_raw).reshape(-1, 1))
 
         # drop & rearrange the columns in the order expected by your trained model!
-        df=df[['Gender', 'Education', 'Self_Employed', 'Married','Credit_History',
+        df=df[['Gender', 'Married','Education', 'Self_Employed', 'Credit_History',
            'Property_Area_Semiurban', 'Property_Area_Urban', 'Property_Area_Rural', 'ln_monthly_return',
            'ln_total_income', 'ln_LoanAmount']]
 
